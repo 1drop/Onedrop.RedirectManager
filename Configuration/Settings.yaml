@@ -1,0 +1,19 @@
+Neos:
+  Neos:
+    modules:
+      management:
+        submodules:
+          redirect:
+            controller: \Onedrop\RedirectManager\Controller\BackendController
+            label: 'Onedrop.RedirectManager:Main:module.label'
+            description: 'Onedrop.RedirectManager:Main:module.description'
+            icon: 'icon-external-link'
+            privilegeTarget: 'Onedrop.RedirectManager:ManageRedirects'
+            # additionalResources:
+            #   styleSheets:
+            #     - 'resource://Onedrop.RedirectManager/Public/Styles/MediaBrowser.css'
+    userInterface:
+      translation:
+        autoInclude:
+          Onedrop.RedirectManager:
+            - 'Main'

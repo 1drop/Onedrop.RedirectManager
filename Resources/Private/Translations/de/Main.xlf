@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="" product-name="Onedrop.RedirectManager" source-language="en" datatype="plaintext" target-language="de">
+    <body>
+        <trans-unit id="module.label" xml:space="preserve" approved="yes">
+            <source>Redirects</source>
+            <target xml:lang="de">Weiterleitungen</target>
+        </trans-unit>
+        <trans-unit id="module.description" xml:space="preserve" approved="yes">
+            <source>This module allows managing of redirects.</source>
+            <target xml:lang="de">Mit diesem Modul werden Weiterleitungen verwaltet</target>
+        </trans-unit>
+        <trans-unit id="field.sourceUriPath" xml:space="preserve">
+            <source>Source URI path</source>
+            <target xml:lang="de">Quell-URI-Pfad</target>
+        </trans-unit>
+        <trans-unit id="field.targetUriPath" xml:space="preserve">
+            <source>Target URI path</source>
+            <target xml:lang="de">Ziel-URI-Pfad</target>
+        </trans-unit>
+        <trans-unit id="field.statusCode" xml:space="preserve">
+            <source>Status code</source>
+            <target xml:lang="de">Statuscode</target>
+        </trans-unit>
+        <trans-unit id="field.host" xml:space="preserve">
+            <source>Host</source>
+            <target xml:lang="de">Host</target>
+        </trans-unit>
+        <trans-unit id="field.hitCounter" xml:space="preserve">
+            <source>Hit counts</source>
+            <target xml:lang="de">Aufrufe</target>
+        </trans-unit>
+        <trans-unit id="field.lastHit" xml:space="preserve">
+            <source>Last hit</source>
+            <target xml:lang="de">Letzter Aufruf</target>
+        </trans-unit>
+        <trans-unit id="redirects.actions.new.label" xml:space="preserve">
+            <source>New redirect</source>
+            <target xml:lang="de">Neue Weiterleitung</target>
+        </trans-unit>
+        <trans-unit id="redirects.new.subtitle" xml:space="preserve">
+            <source>Create a new redirect</source>
+            <target xml:lang="de">Neue Weiterleitung anlegen</target>
+        </trans-unit>
+        <trans-unit id="redirects.edit.subtitle" xml:space="preserve">
+            <source>Edit redirect</source>
+            <target xml:lang="de">Weiterleitung bearbeiten</target>
+        </trans-unit>
+        <trans-unit id="redirects.new.createButton" xml:space="preserve">
+            <source>Create redirect</source>
+            <target xml:lang="de">Neue Weiterleitung</target>
+        </trans-unit>
+        <trans-unit id="redirects.edit.saveRedirect" xml:space="preserve">
+            <source>Save redirect</source>
+            <target xml:lang="de">Weiterleitung speichern</target>
+        </trans-unit>
+        <trans-unit id="redirects.index.switchHost" xml:space="preserve">
+            <source>Switch host</source>
+            <target xml:lang="de">Host wechseln</target>
+        </trans-unit>
+        <trans-unit id="sortby" xml:space="preserve">
+            <source>Sort by</source>
+            <target xml:lang="de">Sortieren nach</target>
+        </trans-unit>
+        <trans-unit id="sortDirection" xml:space="preserve">
+            <source>Sort direction</source>
+            <target xml:lang="de">Sortier-Reihenfolge</target>
+        </trans-unit>
+        <trans-unit id="sortDirection.asc" xml:space="preserve">
+            <source>Ascending</source>
+            <target xml:lang="de">Aufsteigend</target>
+        </trans-unit>
+        <trans-unit id="sortDirection.desc" xml:space="preserve">
+            <source>Descending</source>
+            <target xml:lang="de">Absteigend</target>
+        </trans-unit>
+    </body>
+  </file>
+</xliff>

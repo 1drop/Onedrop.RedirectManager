@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file original="" product-name="Onedrop.RedirectManager" source-language="en" datatype="plaintext">
+		<body>
+			<trans-unit id="module.label" xml:space="preserve" approved="yes">
+				<source>Redirects</source>
+			</trans-unit>
+			<trans-unit id="module.description" xml:space="preserve" approved="yes">
+				<source>This module allows managing of redirects.</source>
+			</trans-unit>
+			<trans-unit id="field.sourceUriPath" xml:space="preserve">
+				<source>Source URI path</source>
+			</trans-unit>
+			<trans-unit id="field.targetUriPath" xml:space="preserve">
+				<source>Target URI path</source>
+			</trans-unit>
+			<trans-unit id="field.statusCode" xml:space="preserve">
+				<source>Status code</source>
+			</trans-unit>
+			<trans-unit id="field.host" xml:space="preserve">
+				<source>Host</source>
+			</trans-unit>
+			<trans-unit id="field.hitCounter" xml:space="preserve">
+				<source>Hit counts</source>
+			</trans-unit>
+			<trans-unit id="field.lastHit" xml:space="preserve">
+				<source>Last hit</source>
+			</trans-unit>
+			<trans-unit id="redirects.actions.new.label" xml:space="preserve">
+				<source>New redirect</source>
+			</trans-unit>
+			<trans-unit id="redirects.new.subtitle" xml:space="preserve">
+				<source>Create a new redirect</source>
+			</trans-unit>
+			<trans-unit id="redirects.edit.subtitle" xml:space="preserve">
+				<source>Edit redirect</source>
+			</trans-unit>
+			<trans-unit id="redirects.new.createButton" xml:space="preserve">
+				<source>Create redirect</source>
+			</trans-unit>
+			<trans-unit id="redirects.edit.saveRedirect" xml:space="preserve">
+				<source>Save redirect</source>
+			</trans-unit>
+			<trans-unit id="redirects.index.switchHost" xml:space="preserve">
+				<source>Switch host</source>
+			</trans-unit>
+			<trans-unit id="sortby" xml:space="preserve">
+				<source>Sort by</source>
+			</trans-unit>
+			<trans-unit id="sortDirection" xml:space="preserve">
+				<source>Sort direction</source>
+			</trans-unit>
+			<trans-unit id="sortDirection.asc" xml:space="preserve">
+				<source>Ascending</source>
+			</trans-unit>
+			<trans-unit id="sortDirection.desc" xml:space="preserve">
+				<source>Descending</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

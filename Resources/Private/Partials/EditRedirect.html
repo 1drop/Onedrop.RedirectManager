@@ -1,0 +1,47 @@
+{namespace neos=Neos\Neos\ViewHelpers}
+<div class="neos-row-fluid">
+    <fieldset class="neos-span5">
+        <legend>{neos:backend.translate(id: 'redirects.new.redirectData', value: 'Redirect Data', source: 'Main', package: 'Onedrop.RedirectManager')}</legend>
+
+        <div class="neos-control-group{f:validation.ifHasErrors(for: 'redirect.sourceUriPath', then: ' neos-error')}">
+            <label class="neos-control-label" for="sourceUriPath">{neos:backend.translate(id: 'field.sourceUriPath', value: 'Source URI path', source: 'Main', package: 'Onedrop.RedirectManager')}</label>
+            <div class="neos-controls">
+                <f:form.textfield property="sourceUriPath" id="sourceUriPath" class="neos-span12" required="true" />
+                <f:render partial="Module/Shared/FieldValidationResults" arguments="{fieldname: 'redirect.sourceUriPath'}"/>
+            </div>
+        </div>
+        <div class="neos-control-group{f:validation.ifHasErrors(for: 'redirect.targetUriPath', then: ' neos-error')}">
+            <label class="neos-control-label" for="targetUriPath">{neos:backend.translate(id: 'field.targetUriPath', value: 'Target URI path', source: 'Main', package: 'Onedrop.RedirectManager')}</label>
+            <div class="neos-controls">
+                <f:form.textfield property="targetUriPath" id="targetUriPath" class="neos-span12" required="true" />
+                <f:render partial="Module/Shared/FieldValidationResults" arguments="{fieldname: 'redirect.targetUriPath'}"/>
+            </div>
+        </div>
+        <div class="neos-control-group{f:validation.ifHasErrors(for: 'redirect.statusCode', then: ' neos-error')}">
+            <label class="neos-control-label" for="statusCode">{neos:backend.translate(id: 'field.statusCode', value: 'Status code', source: 'Main', package: 'Onedrop.RedirectManager')}</label>
+            <div class="neos-controls">
+                <f:form.select property="statusCode" id="statusCode" options="{301: 301, 302: 302, 303: 303, 307: 307, 308: 308}" />
+                <f:render partial="Module/Shared/FieldValidationResults" arguments="{fieldname: 'redirect.statusCode'}"/>
+            </div>
+        </div>
+        <f:if condition="{action} != 'update'">
+            <f:then>
+                <div class="neos-control-group{f:validation.ifHasErrors(for: 'redirect.host', then: ' neos-error')}">
+                    <label class="neos-control-label" for="host">{neos:backend.translate(id: 'field.host', value: 'Host', source: 'Main', package: 'Onedrop.RedirectManager')}</label>
+                    <div class="neos-controls">
+                        <f:form.textfield property="host" id="host" class="neos-span12" />
+                        <f:render partial="Module/Shared/FieldValidationResults" arguments="{fieldname: 'redirect.host'}"/>
+                    </div>
+                </div>
+            </f:then>
+            <f:else>
+                <div class="neos-control-group">
+                    <label class="neos-control-label" for="host">{neos:backend.translate(id: 'field.host', value: 'Host', source: 'Main', package: 'Onedrop.RedirectManager')}</label>
+                    <div class="neos-controls">
+                        <input id="host" type="text" disabled value="{redirect.host}" class="neos-span12" />
+                    </div>
+                </div>
+            </f:else>
+        </f:if>
+    </fieldset>
+</div>

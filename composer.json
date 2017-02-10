@@ -1,0 +1,20 @@
+{
+    "description": "Manage redirects from the RedirectHandler in the Neos backend",
+    "type": "neos-plugin",
+    "license": "MIT",
+    "name": "onedrop/redirectmanager",
+    "require": {
+        "neos/flow": "~4.0",
+        "neos/redirecthandler-databasestorage": "~2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Onedrop\\RedirectManager\\": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "Onedrop.RedirectManager"
+        }
+    }
+}

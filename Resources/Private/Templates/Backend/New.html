@@ -1,0 +1,17 @@
+{namespace neos=Neos\Neos\ViewHelpers}
+<f:layout name="BackendSubModule" />
+
+<f:section name="subtitle">
+	<h2>{neos:backend.translate(id: 'redirects.new.subtitle', value: 'Create a new redirect', source: 'Main', package: 'Onedrop.RedirectManager')}</h2>
+</f:section>
+
+<f:section name="content">
+	<f:form action="create" class="redirect redirect-edit" objectName="redirect">
+		<f:render partial="EditRedirect" arguments="{_all}"/>
+
+		<div class="neos-footer">
+			<f:link.action action="index" class="neos-button">{neos:backend.translate(id: 'cancel', value: 'Cancel', source: 'Module', package: 'Neos.Neos')}</f:link.action>
+			<f:form.submit value="{neos:backend.translate(id: 'redirects.new.createButton', value: 'Create redirect', source: 'Main', package: 'Onedrop.RedirectManager')}" class="neos-button neos-button-primary" />
+		</div>
+	</f:form>
+</f:section>

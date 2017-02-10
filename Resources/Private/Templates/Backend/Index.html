@@ -1,0 +1,55 @@
+{namespace neos=Neos\Neos\ViewHelpers}
+<f:layout name="BackendSubModule" />
+
+<f:section name="content">
+	<div class="neos-row-fluid">
+		<f:form action="index">
+			<div class="neos-control-group">
+				<label class="neos-control-label" for="host">{neos:backend.translate(id: 'field.host', value: 'Host', source: 'Main', package: 'Onedrop.RedirectManager')}</label>
+				<div class="neos-controls">
+					<f:form.select name="hostIdx" id="host" options="{hosts}" value="{hostIdx}" />
+				</div>
+			</div>
+			<f:form.submit value="{neos:backend.translate(id: 'redirects.index.switchHost', source: 'Main', value: 'Switch host', package: 'Onedrop.RedirectManager')}" class="neos-button neos-button-primary" />
+		</f:form>
+	</div>
+	<div class="neos-row-fluid">
+		<table class="neos-table">
+			<thead>
+				<tr>
+					<th> </th>
+					<th><neos:backend.translate id="field.sourceUriPath" source="Main" package="Onedrop.RedirectManager"/></th>
+					<th><neos:backend.translate id="field.targetUriPath" source="Main" package="Onedrop.RedirectManager"/></th>
+					<th><neos:backend.translate id="field.statusCode" source="Main" package="Onedrop.RedirectManager"/></th>
+					<th><neos:backend.translate id="field.hitCounter" source="Main" package="Onedrop.RedirectManager"/></th>
+					<th><neos:backend.translate id="field.lastHit" source="Main" package="Onedrop.RedirectManager"/></th>
+					<th>&nbsp;</th>
+				</tr>
+			</thead>
+			<f:for each="{redirects}" key="index" as="redirect" iteration="redirectIteration">
+				<tr>
+					<td>
+						<label for="redirect-{redirectIteration.cycle}" class="neos-checkbox">
+							<f:form.checkbox name="redirects" multiple="true" value="{redirect.identifier}" id="redirect-{redirectIteration.cycle}" /><span></span>
+						</label>
+					</td>
+					<td>{redirect.sourceUriPath}</td>
+					<td>{redirect.targetUriPath}</td>
+					<td>{redirect.statusCode}</td>
+					<td>{redirect.hitCounter}</td>
+					<td>{redirect.lastHit -> f:format.date()}</td>
+					<td class="neos-action">
+						<div class="neos-pull-right">
+							<f:link.action action="edit" arguments="{redirect: redirect}" class="neos-button neos-button-primary">
+								<i class="icon-pencil icon-white"></i>
+							</f:link.action>
+						</div>
+					</td>
+				</tr>
+			</f:for>
+		</table>
+	</div>
+	<div class="neos-footer">
+		<f:link.action action="new" class="neos-button neos-button-primary" title="{neos:backend.translate(id: 'redirects.actions.new.label', source: 'Main', package: 'Onedrop.RedirectManager')}"><neos:backend.translate id="redirects.actions.new.label" source="Main" package="Onedrop.RedirectManager"/></f:link.action>
+	</div>
+</f:section>

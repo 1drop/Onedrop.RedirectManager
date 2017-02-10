@@ -1,0 +1,16 @@
+privilegeTargets:
+  'Neos\Flow\Security\Authorization\Privilege\Method\MethodPrivilege':
+    'Onedrop.RedirectManager:ManageRedirects':
+      matcher: 'method(Onedrop\RedirectManager\Controller\BackendController->(.*)Action())'
+roles:
+  'Neos.Neos:AbstractEditor':
+    privileges:
+      -
+        privilegeTarget: 'Onedrop.RedirectManager:ManageRedirects'
+        permission: GRANT
+
+  'Neos.Neos:Administrator':
+    privileges:
+      -
+        privilegeTarget: 'Onedrop.RedirectManager:ManageRedirects'
+        permission: GRANT
